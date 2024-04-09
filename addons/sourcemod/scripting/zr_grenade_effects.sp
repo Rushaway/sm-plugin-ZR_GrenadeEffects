@@ -233,7 +233,7 @@ public void OnPlayerHurt(Event event, const char[] name, bool dontBroadcast)
 	char g_szWeapon[32];
 	GetEventString(event, "weapon", g_szWeapon, sizeof(g_szWeapon));
 
-	if (!strcmp(g_szWeapon, "hegrenade", false))
+	if (strcmp(g_szWeapon, "hegrenade", false) != 0)
 	{
 		return;
 	}
